@@ -20,8 +20,13 @@ eventEmitter.on('connection', listener2);
 let eventListeners = require('events').EventEmitter.listenerCount(eventEmitter,'connection');
 console.log(eventListeners + " 个监听器监听连接事件。");
 
+console.log('middle --------------------------------------');
+
 // 处理 connection 事件
 eventEmitter.emit('connection');
+
+//middle progrom
+console.log('middle --------------------------------------');
 
 // 移除监绑定的 listener1 函数
 eventEmitter.removeListener('connection', listener1);
